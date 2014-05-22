@@ -1,0 +1,11 @@
+> (define acc (make-account 100 'secret-password))
+acc
+> ((acc 'secret-password 'withdraw) 40)
+60
+> ((acc 'secret-password 'deposit) 100)
+160
+> ((acc 'secret-password 'withdraw) 80)
+80
+> ((acc 'wrong-password 'withdraw) 40)
+*** ERROR: Incorrect password wrong-password
+

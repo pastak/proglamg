@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+\begin{document}
+\title{「プログラミング言語」\\
+第2回課題}
+\author{工学部情報学科\\
+平成25年入学\\
+学籍番号：1029-25-2723\\
+森井 崇斗 }
+\date{\today}
+\maketitle
+
+\lstset{numbers=left,basicstyle=\ttfamily\small,
+  commentstyle=\textit, keywordstyle=\bfseries}
+
+\section{問題3.1}
+
+\subsection{考え方}
+
+make-accumulatorの中で現在の和(accumulation)を局所変数として保持する。また、make-accumulatorは引数の値を局所変数に足した値で局所変数を破壊的に変更するような手続きを返却する。
+
+\subsection{プログラムリストと考え方の対応について}
+
+\lstinputlisting{3-1.scm}
+
+以下の(n)はプログラムリスト内のコメント部分の(n)に対応している。
+
+\begin{description}
+    \item[(1)]局所変数を設定
+    \item[(2)]make-accumulatorで返却する手続きを記述
+    \item[(3)]局所変数を破壊的に変更
+\end{description}
+
+\subsection{実行例}
+
+\lstinputlisting{3-1-sample.txt}
+\section{問題3.3}
+
+\subsection{考え方}
+
+make-accountを実行する際に設定するパスワードを引数で受け取るように追加する。また、dispatch内で対応する手続きを呼び出す前にパスワードがマッチするかどうかを確認する。
+
+\subsection{プログラムリストと考え方の対応について}
+
+\lstinputlisting{3-3.scm}
+
+以下の(n)はプログラムリスト内のコメント部分の(n)に対応している。
+
+\begin{description}
+    \item[(1)]make-accountにパスワードを引数として受け取るように追加
+    \item[(2)]各手続きを呼び出す際もパスワードを要求する
+    \item[(3)]パスワードが正しいかどうかを確認する
+\end{description}
+
+\subsection{実行例}
+
+\lstinputlisting{3-3-sample.txt}
+
+
+\end{document}
+

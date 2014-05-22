@@ -1,0 +1,16 @@
+> (define A (make-accumulator 5))
+A
+> (A 100)
+105
+> (A 10)
+115
+> (define B (make-accumulator 10))
+B
+> (B 20)
+30
+> (A (B 10))
+155
+> (B 1)
+41
+> (A 5)
+160

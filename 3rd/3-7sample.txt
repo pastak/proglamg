@@ -1,0 +1,15 @@
+> (define peter-acc (make-account 1000 'open-sesame))
+peter-acc
+> (define paul-acc(make-joint peter-acc 'open-sesame 'rosebud))
+paul-acc
+> ((paul-acc 'rosebud 'withdraw)100)
+900
+((paul-acc 'open-sesame 'withdraw)200)
+*** ERROR: Incorrect password
+> ((peter-acc 'open-sesame 'withdraw)150)
+750
+> ((peter-acc 'rosebud 'withdraw)150)
+*** ERROR: Incorrect password rosebud
+> ((paul-acc 'rosebud 'withdraw)200)
+550
+
